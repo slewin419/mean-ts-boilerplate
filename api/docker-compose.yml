@@ -3,8 +3,7 @@ services:
   app:
     container_name: app
     restart: always
-    build: ./
-    command: 
+    build: ./    
     ports:
       - "3000:3000"
     volumes:
