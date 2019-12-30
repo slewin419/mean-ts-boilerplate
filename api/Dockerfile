@@ -1,15 +1,15 @@
 FROM node:10
 
-RUN mkdir -p /usr/src/app
+RUN mkdir -p /app
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY package.json /usr/src/app
+COPY package.json /app
 
 RUN npm install
 
-COPY . /usr/src/app
+COPY . /app
 
 EXPOSE 3000
 
-CMD [ "npm", "start"]
+CMD [ "npm", "run", "dev"]
